@@ -1,0 +1,85 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'dagger.hilt.android.plugin'
+
+}
+
+android {
+    namespace 'com.vlk.application'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.vlk.application"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    kapt {
+        correctErrorTypes true
+    }
+
+}
+
+dependencies {
+    implementation libs.androidx.core.ktx
+    implementation platform(libs.androidx.compose.bom)
+    implementation libs.androidx.ui
+    implementation libs.androidx.material3
+    implementation libs.androidx.junit.ktx
+    debugImplementation libs.androidx.ui.test.manifest
+    implementation libs.android.material
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.recyclerview
+
+    // Networking dependencies
+    implementation libs.retrofit
+    implementation libs.converter.gson
+    implementation libs.squareup.okhttp3
+
+    // Coroutines
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.kotlinx.coroutines.core
+
+    // Dagger - Hilt
+    implementation libs.google.dagger.hilt
+    kapt libs.kapt.dagger.hilt
+
+    // Activity KTX for viewModels()
+    implementation libs.androidx.activity
+    implementation libs.androidx.lifecycle
+
+    // Unit testing
+    testImplementation libs.junit
+    testImplementation libs.jetbrains.kotlinx
+    testImplementation libs.mockito
+    testImplementation libs.mockito.inline
+    testImplementation libs.mockito.kotlin
+    testImplementation libs.arch.core
+
+}
+
+
+

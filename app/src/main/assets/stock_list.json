@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "ING Groep 19/07 |INGA",
+    "price": 4585.00
+  },
+  {
+    "id": 2,
+    "name": "ASML Holding 19/07 |ASML",
+    "price": 4572.00
+  },
+  {
+    "id": 3,
+    "name": "BE Semiconductor 19/07 |BESI",
+    "price": 4582.12
+  },
+  {
+    "id": 4,
+    "name": "Relx 19/07 |REL",
+    "price": 4583.00
+  },
+  {
+    "id": 5,
+    "name": "NN Group NV 19/07 ",
+    "price": 4581.00
+  },
+  {
+    "id": 6,
+    "name": "NWS Group 19/07 ",
+    "price": 4582.00
+  },
+  {
+    "id": 7,
+    "name": "Midcap Index ",
+    "price": 4580.00
+  }
+]

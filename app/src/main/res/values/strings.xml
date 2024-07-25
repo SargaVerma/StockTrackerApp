@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VLKApplication</string>
+
+    <string name="app_name_application">VLK Stock</string>
+
+    <string name="stock">Stocks</string>
+    <string name="price_difference">Price(Difference)</string>
+    <string name="title">title</string>
+    <string name="price">Price</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="stop">Stop</string>
+</resources>
